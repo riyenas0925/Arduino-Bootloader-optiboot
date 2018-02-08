@@ -1,0 +1,29 @@
+AVR STUDIO 4에서 ISP(STK500)연결후 TOOLS - PROGRAM AVR - AUTO CONNECT
+
+MAIN에서 ATMEGA328P, ATMEGA328 둘중 자신에 해당하는 모델 선택 READ SIGNATURE로 정상적으로 연결됬는지 확인
+
+PROGRAM페이지로 이동한다음 FLASH부분에서 자신에게 맞는 부트로더의 HEX파일을 선택한다음 PROGRAM버튼을 누른다 ATMEGA328,ATMEGA328P 둘다 부트로더는 동일하다.
+(이때 부트로더 HEX파일은 아두이노 설치폴더에 있다.)
+
+-> 아래는 ATMEGA328 3.3V 8MHz 의 HEX파일 위치이다.
+C:\Program Files (x86)\Arduino\hardware\arduino\avr\bootloaders\atmega\ATmegaBOOT_168_pro_8MHz
+
+FUSES페이지로 이동한다음
+
+BODLEVEL disable -> 1.8
+SPIEN, BOOTRST 체크 나머지는 체크 x
+BOOTSZ를 1024로 변경
+SUT_CKSEL을 맨마지막 옵션으로
+
+bootrst 체크
+
+
+low_fuses=0xFF
+high_fuses=0xDA
+extended_fuses=0xFE
+
+로 설정후 PROGRAM버튼을 누른다.
+
+LOCKBITS페이지러 이동한다음
+lock_bits=0xCF
+로 설정후 PROGRAM한다.

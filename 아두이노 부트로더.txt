@@ -1,0 +1,33 @@
+<부트로더>
+시리얼X Isp(STK500)o
+
+<Hex 파일 위치>
+arduino-1.0.6 - hardware - arduino - bootloaders - atmega8 - ATmegaBOOT-prod-firmware-2009-11-07.hex
+
+
+<Code Vision>
+Chip: Atmega8
+Chip Clock: 16MHz
+Fuse Bit: SUT=0
+          BOOTRST=0
+          BOOTSZ1=0
+          CKOPT=0
+
+파일형식 Hex로 바꾼후 Program
+
+
+<AVR Studio 4>
+Chip: Atmega8
+Fuse Bit: high = 0xCA
+          low = 0xFF
+
+Flash 에서 Hex파일 선택후 Program
+
+----------------------------------------------------------------------------------------------------
+
+<아두이노>
+시리얼o Isp(STK500)x
+
+보드: Arduino NG or order w/Atmega8
+프로그래머: arduino as isp
+시리얼포트: 사용자 지정

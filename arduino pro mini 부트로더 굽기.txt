@@ -1,0 +1,17 @@
+처음 우노 보드에 RST - GND 에 10uf콘댄서 삽입
+그다음 miso,mosi,sck,rst,vcc,gnd 핀연결
+예제 arduinoisp 을 우노보드를 avr isp로 업로드
+
+그다음 자신이 부트로더를 심고 싶은 보드로 타겟을 정하고 컴포트 (우노가 연결되있는)를 설정후 arduino as isp로 부트로더 굽기
+이때
+
+avrdude: Expected signature for ATMEGA328P is 1E 95 0F
+Double check chip, or use -F to override this check.
+
+이런 오류가 발생한다면 
+
+atmega328p가 아닌 다른 칩을 사용하고 있는것이기 때문에 atmega328-PU에 대한 signature로 바꿔줘야 한다. 따라서
+
+C:\Program Files (x86)\Arduino\hardware\tools\avr\etc 이위치에 있는 avrdude.conf파일을 수정해줘야한다.
+
+0x1e 0x95 0x0F 검색후 0F를 14로 변경하면 된다. 저장후 ide 재시작후 부트로더를 올리면 끝
