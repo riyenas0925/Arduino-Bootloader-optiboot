@@ -2,7 +2,7 @@
 
 > Atmega8에 UNO 부트로더를 올리면 10초정도 후에 프로그램이 시작되는 문제를 해결하기 위함
 
-### atmega8  optiboot 적용 부트로더
+## atmega8  optiboot 적용 부트로더
 
 1. AVR STUDIO 4에서 ISP(STK500)연결후 `TOOLS` - `PROGRAM AVR` - `AUTO CONNECT`
 
