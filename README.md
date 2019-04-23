@@ -28,13 +28,13 @@
     SUT_CKSEL Ext, Cryatal/Resonator High; Start-up time: 16K CK + 64로 설정
     ```
 
-### 아두이노 설정
+## 아두이노 설정
 
 1. 아두이노 `프로그램 실행후 파일` - `환경설정` - `추가적인 보드매니저 URLs` 에 
 https://github.com/Optiboot/optiboot/releases/download/v6.2/package_optiboot_optiboot-additional_index.json 을 넣고 확인을 누른다
 
 2. `툴` - `보드` - `보드 매니저` - 검색창에 opti 검색후 나오는 패키지를 설치한다.
 
-### 사용방법
+## 사용방법
 
 1. 툴 - 보드(optiboot on 28-pin cpus), 프로세서(atmega8), cpu speed(16MHz), 프로그래머(avr isp)로 설정후 스케치를 다운로드 하면 된다.
