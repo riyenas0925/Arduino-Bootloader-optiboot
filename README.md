@@ -14,6 +14,7 @@
 4. 아래는 OPTIBOOT_ATMEGA8 의 HEX파일 위치이다.
     > C:\Program Files (x86)\Arduino\hardware\arduino\avr\bootloaders\optiboot\optiboot_atmega8.hex	//아두이노 1.8.5버전 기준
 
+5. 아래와 같이 fuse bit, lock bit를 설정한다.
     ```
     //AVR Studio 기준
     high_fuses=0xdc
